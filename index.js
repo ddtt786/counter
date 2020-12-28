@@ -14,7 +14,7 @@ $(document).ready(() => {
 		get("https://playentry.org/api/discuss/find?category=free")
 		.then(function(d){
 			odometer.innerHTML = d.count;
-			console.log("업데")
+			console.log("update")
 		});
 	};
 	setInterval(comucnt, 2000)
