@@ -8,14 +8,13 @@ get = function(url){
 	});
 };
 
-$.ajaxSetup({ async: false });
-
 $(document).ready(() => {
 	const odometer = document.querySelector(".odometer");
 	comucnt = function(){
 		get("https://playentry.org/api/discuss/find?category=free")
 		.then(function(d){
 			odometer.innerHTML = d.count;
+			console.log("업데")
 		});
 	};
 	setInterval(comucnt, 2000)
